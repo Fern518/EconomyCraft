@@ -8,4 +8,9 @@
   "standalone_admin_commands": false,
   "scoreboard_enabled": true,
   "server_shop_enabled": true
+  ,
+  "dispose_enabled": true,
+  "dispose_counts_toward_daily_limit": true,
+  "dispose_price_multiplier": 1.0,
+  "dispose_fixed_price_per_item": null
 }

@@ -47,6 +47,7 @@ public final class EconomyCommands {
         dispatcher.register(buildBalance().requires(s -> EconomyConfig.get().standaloneCommands));
         dispatcher.register(buildPay().requires(s -> EconomyConfig.get().standaloneCommands));
         dispatcher.register(SellCommand.register().requires(s -> EconomyConfig.get().standaloneCommands));
+        dispatcher.register(DisposeCommand.register().requires(s -> EconomyConfig.get().standaloneCommands));
         dispatcher.register(buildShop().requires(s -> EconomyConfig.get().standaloneCommands));
         dispatcher.register(buildOrders().requires(s -> EconomyConfig.get().standaloneCommands));
         dispatcher.register(buildDaily().requires(s -> EconomyConfig.get().standaloneCommands));
@@ -106,6 +107,7 @@ public final class EconomyCommands {
         root.then(buildBalance());
         root.then(buildPay());
         root.then(SellCommand.register());
+        root.then(DisposeCommand.register());
         root.then(buildShop());
         root.then(buildOrders());
         root.then(buildDaily());

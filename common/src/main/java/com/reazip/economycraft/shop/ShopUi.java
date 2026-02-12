@@ -316,7 +316,7 @@ public final class ShopUi {
                         long bal = eco.getBalance(player.getUUID(), true);
 
                         if (bal < total) {
-                            sp.sendSystemMessage(Component.literal("Not enough balance").withStyle(ChatFormatting.RED));
+                            sp.sendSystemMessage(Component.literal("u a broke ass bitch lmfao").withStyle(ChatFormatting.RED));
                         } else {
                             eco.removeMoney(player.getUUID(), total);
                             eco.addMoney(current.seller, cost);

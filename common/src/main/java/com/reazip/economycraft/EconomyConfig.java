@@ -33,6 +33,14 @@ public class EconomyConfig {
     public boolean scoreboardEnabled;
     @SerializedName("server_shop_enabled")
     public boolean serverShopEnabled = true;
+    @SerializedName("dispose_enabled")
+    public boolean disposeEnabled = true;
+    @SerializedName("dispose_counts_toward_daily_limit")
+    public boolean disposeCountsTowardDailyLimit = true;
+    @SerializedName("dispose_price_multiplier")
+    public double disposePriceMultiplier = 1.0;
+    @SerializedName("dispose_fixed_price_per_item")
+    public Long disposeFixedPricePerItem = null;
 
     private static EconomyConfig INSTANCE = new EconomyConfig();
     private static Path file;

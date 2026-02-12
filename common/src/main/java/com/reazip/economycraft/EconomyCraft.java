@@ -16,6 +16,7 @@ import java.util.Locale;
 public final class EconomyCraft {
     public static final String MOD_ID = "economycraft";
     private static EconomyManager manager;
+    private static com.reazip.economycraft.stocks.StockManager stockManager;
     private static MinecraftServer lastServer;
     private static final NumberFormat FORMAT = NumberFormat.getInstance(Locale.GERMANY);
 
@@ -27,10 +28,14 @@ public final class EconomyCraft {
         });
 
         LifecycleEvent.SERVER_STARTED.register(EconomyCraft::getManager);
+        LifecycleEvent.SERVER_STARTED.register(server -> stockManager = com.reazip.economycraft.stocks.StockManager.get(server));
 
         LifecycleEvent.SERVER_STOPPING.register(server -> {
             if (manager != null && lastServer == server) {
                 manager.save();
+            }
+            if (stockManager != null && lastServer == server) {
+                stockManager.save();
             }
         });
 
