@@ -1,0 +1,23 @@
+{
+  "diamond": {
+    "name": "Diamond Stock",
+    "price": 1000.0,
+    "volatility": 0.02,
+    "liquidity": 10000.0,
+    "historySize": 9
+  },
+  "gold": {
+    "name": "Gold Stock",
+    "price": 500.0,
+    "volatility": 0.03,
+    "liquidity": 8000.0,
+    "historySize": 9
+  },
+  "iron": {
+    "name": "Iron Stock",
+    "price": 100.0,
+    "volatility": 0.05,
+    "liquidity": 15000.0,
+    "historySize": 9
+  }
+}

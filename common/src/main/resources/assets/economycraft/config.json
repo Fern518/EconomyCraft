@@ -13,4 +13,9 @@
   "dispose_counts_toward_daily_limit": true,
   "dispose_price_multiplier": 1.0,
   "dispose_fixed_price_per_item": null
+  ,
+  "stock_trade_cooldown_ms": 1000,
+  "stock_max_trade_qty": 1000,
+  "stock_confirm_threshold_value": 10000,
+  "stock_tick_interval_ms": 1000
 }

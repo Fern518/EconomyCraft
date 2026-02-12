@@ -41,6 +41,14 @@ public class EconomyConfig {
     public double disposePriceMultiplier = 1.0;
     @SerializedName("dispose_fixed_price_per_item")
     public Long disposeFixedPricePerItem = null;
+    @SerializedName("stock_trade_cooldown_ms")
+    public long stockTradeCooldownMs = 1000L;
+    @SerializedName("stock_max_trade_qty")
+    public long stockMaxTradeQty = 1000L;
+    @SerializedName("stock_confirm_threshold_value")
+    public long stockConfirmThresholdValue = 10000L;
+    @SerializedName("stock_tick_interval_ms")
+    public long stockTickIntervalMs = 1000L;
 
     private static EconomyConfig INSTANCE = new EconomyConfig();
     private static Path file;
